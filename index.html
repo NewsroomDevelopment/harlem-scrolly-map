@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8' />
-    <title>Mapbox Storytelling</title>
+    <title>Harlem Food History</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
@@ -13,7 +13,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         a,
@@ -42,6 +42,10 @@
             margin: 0;
             padding: 2vh 2vw;
             text-align: center;
+        }
+
+        #header h1{
+            font-size: 50px;
         }
 
         #footer {
@@ -107,8 +111,8 @@
 
         .step div {
             padding: 25px 50px;
-            line-height: 25px;
-            font-size: 13px;
+            line-height: 30px;
+            font-size: 20px;
         }
 
         .step img {
@@ -285,26 +289,107 @@
         // instantiate the scrollama
         var scroller = scrollama();
 
+        //the markers on the map
         var places = {
             'type': 'FeatureCollection',
             'features': [{
                     'type': 'Feature',
                     'properties': {
-                        'description': "Spec",
+                        'description': 'Sylvia\'s Restaurant of Harlem',
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-73.962852, 40.811623]
+                        'coordinates': [-73.94447900208048, 40.80865259993899]
                     }
                 },
                 {
                     'type': 'Feature',
                     'properties': {
-                        'description': 'Community',
+                        'description': 'Amy Ruth’s',
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-73.96576700951832, 40.805928994507994],
+                        'coordinates': [-73.95021425760106, 40.80270006369895],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Melba’s',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.95658658643693, 40.803272405026455],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Red Rooster',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.94463548458589, 40.808285654806056],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'The World Famous Cotton Club',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.9602977272153, 40.81780651171123],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Seasoned Vegan',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.95275073061616, 40.80080104628655],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Tsion Cafe',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.94344591712296, 40.82640216381314],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Archer & Goat',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.94834750178023, 40.80459943429945],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Little Senegal',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.95426384225763, 40.80434171197095],
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': 'Schomburg Center for Research and Black Culture',
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.94059340786883, 40.81475769680448],
                     }
                 },
             ]
